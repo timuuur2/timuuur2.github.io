@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1 - Гиперссылки и форма</title>
+</head>
+<body>
 
+
+<ul>
+    <li><a href="http://kubsu.ru/">Абсолютная ссылка на kubsu.ru (http)</a></li>
+    <li><a href="https://kubsu.ru/">Абсолютная ссылка на kubsu.ru (https)</a></li>
+    <li<a><a href="https://kubsu.ru">
+  <img src="image.jpg" alt="Моя картинка" width="200">
+</a>
+    <li><a href="/about.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+    <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+    <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
+    <li> <a href="https://vk.com/feed" target="_blank" title="prog" >  ссылкa с тремя параметрами в URL    <li><a href="https://example.com/page?id=123">Ссылка с параметром id</a></li>
+    <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+    <li><a href="about/about.html">Относительная ссылка на страницу в каталоге about</a></li>
+    <li><a href="../page.html">Относительная ссылка на страницу уровнем выше</a></li>
+    <li><a href="../../page.html">Относительная ссылка на страницу двумя уровнями выше</a></li>
+    <li>Это <a href="https://example.com">контекстная ссылка</a> внутри абзаца</li>
+ <li> <a href="https://kubsu.ru/ru/fktipm/novosti-i-obyavleniya"> ссылка на фрагмент страницы стороннего сайта</a></li> 
+    <li><br>
+				<img src="img.jpg" alt="" usemap="#Map">
+             <map name="Map">
+                <area shape="rect" 
+               coords="172,17,288,131" 
+               href="https://znanierussia.ru/articles/Прямоугольник"   
+               alt="Прямоугольная область"
+               title="Прямоугольник (172,17,288,131)">
+              <area shape="circle" 
+              coords="69,80,57" 
+              href="https://skysmart.ru/articles/mathematic/okruzhnost-i-krug" 
+              alt="Круглая область"
+              title="Круг (центр: 69,80; радиус: 57)"> 
+             </map>       
+				</li>    <li><a href="">Ссылка с пустым href</a></li>
+    <li><a>Ссылка без href</a></li>
+    <li><a href="https://example.com/" rel="nofollow">Ссылка запрещенная для перехода поисковиками</a></li>
+    <li><noindex><a href="https://example.com">Ссылка запрещенная для индексации</a></noindex></li>
+</ul>
+<ol>
+    <li><a href="https://example.com" title="Ссылка 1">Ссылка 1</a></li>
+    <li><a href="https://example.com" title="Ссылка 2">Ссылка 2</a></li>
+    <li><a href="https://example.com" title="Ссылка 3">Ссылка 3</a></li>
+</ol>
+
+<h2></h2>
+<p><a href="ftp://user:password@example.com/myfile.zip">Файл на FTP сервере</a></p>
+
+
+<h1 id="fragment">Форма</h1>
+<form action="/" method="POST">
+    <label>ФИО:<br>
+        <input type="text" name="fio" required>
+    </label><br><br>
+
+    <label>Телефон:<br>
+        <input type="tel" name="phone">
+    </label><br><br>
+
+    <label>E-mail:<br>
+        <input type="email" name="email">
+    </label><br><br>
+
+    <label>Дата рождения:<br>
+        <input type="date" name="birthdate">
+    </label><br><br>
+
+    Пол:<br>
+    <label><input type="radio" name="gender" value="male"> Мужской</label>
+    <label><input type="radio" name="gender" value="female"> Женский</label><br><br>
+
+    Любимый язык программирования:<br>
+    <select name="languages[]" multiple>
+        <option value="Pascal">Pascal</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="PHP">PHP</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="Haskel">Haskel</option>
+        <option value="Clojure">Clojure</option>
+        <option value="Prolog">Prolog</option>
+        <option value="Scala">Scala</option>
+    </select><br><br>
+
+    <label>Биография:<br>
+        <textarea name="bio"></textarea>
+    </label><br><br>
+
+    <label><input type="checkbox" name="contract"> С контрактом ознакомлен(а)</label><br><br>
+
+    <input type="submit" value="Сохранить">
+</form>
+
+</body>
+</html>
