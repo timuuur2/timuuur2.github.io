@@ -2,11 +2,30 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Задание 1 - Гиперссылки и форма</title>
+    <title>Задание 1 - Макет</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
+    <div class="container header-content">
+        <img src="img2.jpg" class="logo" alt="logo">
+        <div class="site-name">Вёрстка сайта</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#links">Ссылки</a></li>
+                    <li><a href="#table">Таблица</a></li>
+                    <li><a href="#form">Форма</a></li>            </ul>
+        </nav>
+    </div>
+</header>
 
+<main class="container">
+<section id="links">
+
+    <section>
+        <h2>Список гиперссылок</h2>
+        <ul>
 <ul>
     <li><a href="http://kubsu.ru/">Абсолютная ссылка на kubsu.ru (http)</a></li>
     <li><a href="https://kubsu.ru/">Абсолютная ссылка на kubsu.ru (https)</a></li>
@@ -50,53 +69,97 @@
 
 <h2></h2>
 <p><a href="ftp://user:password@example.com/myfile.zip">Файл на FTP сервере</a></p>
+        </ul>
+    </section>
 
+    <section>
+<section id="table">
+        <h2>Таблица</h2>
+        <table>
+            <tr>
+                <th colspan="4">Заголовок таблицы</th>
+            </tr>
+            <tr>
+                <th>Колонка 1</th>
+                <th>Колонка 2</th>
+                <th>Колонка 3</th>
+                <th>Колонка 4</th>
+            </tr>
+            <tr>
+                <td>Ячейка 1</td>
+                <td>Ячейка 2</td>
+                <td>Ячейка 3</td>
+                <td>Ячейка 4</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Объединённая</td>
+                <td>Ячейка</td>
+                <td>Ячейка</td>
+                <td>Ячейка</td>
+            </tr>
+            <tr>
+                <td>Ячейка</td>
+                <td colspan="2">Объединённые</td>
+            </tr>
+            <tr>
+                <td>Ячейка</td>
+                <td>Ячейка</td>
+                <td>Ячейка</td>
+                <td>Ячейка</td>
+            </tr>
+        </table>
+    </section>
 
-<h1 id="fragment">Форма</h1>
-<form action="/" method="POST">
-    <label>ФИО:<br>
-        <input type="text" name="fio" required>
-    </label><br><br>
+    <section>
+<section id="form">
+        <h2 id="fragment">Форма</h2>
+        <form action="/" method="POST">
+            <label>ФИО:<br>
+                <input type="text" name="fio" required>
+            </label><br><br>
 
-    <label>Телефон:<br>
-        <input type="tel" name="phone">
-    </label><br><br>
+            <label>Телефон:<br>
+                <input type="tel" name="phone">
+            </label><br><br>
 
-    <label>E-mail:<br>
-        <input type="email" name="email">
-    </label><br><br>
+            <label>E-mail:<br>
+                <input type="email" name="email">
+            </label><br><br>
 
-    <label>Дата рождения:<br>
-        <input type="date" name="birthdate">
-    </label><br><br>
+            <label>Дата рождения:<br>
+                <input type="date" name="birthdate">
+            </label><br><br>
 
-    Пол:<br>
-    <label><input type="radio" name="gender" value="male"> Мужской</label>
-    <label><input type="radio" name="gender" value="female"> Женский</label><br><br>
+            Пол:<br>
+            <label><input type="radio" name="gender" value="male"> Мужской</label>
+            <label><input type="radio" name="gender" value="female"> Женский</label><br><br>
 
-    Любимый язык программирования:<br>
-    <select name="languages[]" multiple>
-        <option value="Pascal">Pascal</option>
-        <option value="C">C</option>
-        <option value="C++">C++</option>
-        <option value="JavaScript">JavaScript</option>
-        <option value="PHP">PHP</option>
-        <option value="Python">Python</option>
-        <option value="Java">Java</option>
-        <option value="Haskel">Haskel</option>
-        <option value="Clojure">Clojure</option>
-        <option value="Prolog">Prolog</option>
-        <option value="Scala">Scala</option>
-    </select><br><br>
+            <label>Любимый язык программирования:<br>
+                <select name="languages[]" multiple>
+                    <option value="C++">C++</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+            </label><br><br>
 
-    <label>Биография:<br>
-        <textarea name="bio"></textarea>
-    </label><br><br>
+            <label>Биография:<br>
+                <textarea name="bio"></textarea>
+            </label><br><br>
 
-    <label><input type="checkbox" name="contract"> С контрактом ознакомлен(а)</label><br><br>
+            <label><input type="checkbox" name="contract"> С контрактом ознакомлен(а)</label><br><br>
 
-    <input type="submit" value="Сохранить">
-</form>
+            <input type="submit" value="Сохранить">
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; Тимур Хорошев</p>
+    </div>
+</footer>
 
 </body>
 </html>

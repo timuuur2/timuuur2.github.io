@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* Header */
+header {
+    background: #5a91c5;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2d5a8e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.site-name {
+    font-size: 20px;
+    margin-left: 15px;
+    flex: 1;
+}
+
+/* Menu */
+nav ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul.menu li {
+    margin-left: 20px;
+}
+
+nav ul.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #d6e4f0;
+}
+
+tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+th {
+    background: #5a91c5;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #5a91c5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
