@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости услуги</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор стоимости услуги</h1>
+        
+        <div class="form-group">
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" min="1" value="1">
+        </div>
+
+        <div class="form-group">
+            <label>Тип услуги:</label>
+            <div class="radio-group" id="serviceType">
+                <label class="radio-option">
+                    <input type="radio" name="service" value="basic" data-price="1000">
+                    <span>Базовая услуга - 1000 ₽</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="service" value="standard" data-price="2000">
+                    <span>Стандартная услуга - 2000 ₽</span>
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="service" value="premium" data-price="3000">
+                    <span>Премиум услуга - 3000 ₽</span>
+                </label>
+            </div>
+        </div>
+
+        <div id="optionsContainer" class="options-container">
+            <div class="form-group">
+                <label>Опции товара:</label>
+                <select id="productOptions" class="hidden">
+                    <option value="">Выберите опцию</option>
+                </select>
+                <div id="productOptionsCheckbox" class="checkbox-group hidden"></div>
+            </div>
+        </div>
+
+        <div id="propertiesContainer" class="options-container">
+            <div class="form-group">
+                <label>Свойства товара:</label>
+                <div id="productProperties" class="checkbox-group"></div>
+            </div>
+        </div>
+
+        <div class="price-display">
+            <h2>Итоговая стоимость:</h2>
+            <div class="price" id="totalPrice">0 ₽</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
