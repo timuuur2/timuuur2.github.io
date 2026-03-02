@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+        }
+
+        .screenshot-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .screenshot-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: white;
+            padding: 5px;
+        }
+
+        .screenshot-caption {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+
+        .screenshot-caption i {
+            color: #3498db;
+            margin-right: 8px;
+        }
+
+        /* Адаптивный дизайн для мобильных устройств */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .screenshot-caption {
+                font-size: 1em;
+            }
+        }
+
+        /* Стили для нумерации скриншотов */
+        .screenshot-number {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Мои скриншоты</h1>
+        <h1>Лабораторная работа №2</h1>
+
+        <!-- Скриншот 1 -->
+        <div class="screenshot-card">
+            <img src="photo2.1.jpg" alt="Скриншот 1" class="screenshot-image">
+            <div class="screenshot-caption">
+                <span class="screenshot-number">1</span>
+                <i>📅</i> получить главную страницу методом GET в протоколе HTTP 1.0
+            </div>
+        </div>
+
+        <!-- Скриншот 2 -->
+        <div class="screenshot-card">
+            <img src="photo2.2.jpg" alt="Скриншот 2" class="screenshot-image">
+            <div class="screenshot-caption">
+                <span class="screenshot-number">2</span>
+                <i>🔍</i> получить внутреннюю страницу методом GET в протоколе HTTP 1.1            </div>
+        </div>
+
+        <!-- Скриншот 3 -->
+        <div class="screenshot-card">
+            <img src="photo2.3.jpg" alt="Скриншот 3" class="screenshot-image">
+            <div class="screenshot-caption">
+                <span class="screenshot-number">3</span>
+                <i>🌐</i> определить размер файла file.tar.gz, не скачивая его
+            </div>
+        </div>
+
+        <!-- Скриншот 4 -->
+        <div class="screenshot-card">
+            <img src="photo2.4.jpg" alt="Скриншот 4" class="screenshot-image">
+            <div class="screenshot-caption">
+                <span class="screenshot-number">4</span>
+                <i>🔌</i> определить медиатип ресурса /image.png;
+            </div>
+        </div>
+        <!-- Скриншот 5 -->
+        <div class="screenshot-card">
+            <img src="photo2.5.jpg" alt="Скриншот 5" class="screenshot-image">
+            <div class="screenshot-caption">
+                <span class="screenshot-number">5</span>
+                <i>🔌</i> отправить комментарий на сервер по адресу /index.php;
+            </div>
+        </div>
+ <!-- Скриншот 6 -->
+        <div class="screenshot-card">
+            <img src="photo2.6.jpg" alt="Скриншот 6" class="screenshot-image">
+            <div class="screenshot-caption">
+                <span class="screenshot-number">6</span>
+                <i>🔌</i> получить первые 100 байт файла /file.tar.gz;
+            </div>
+        </div>
+<!-- Скриншот 7 -->
+        <div class="screenshot-card">
+            <img src="photo2.7.jpg" alt="Скриншот 7" class="screenshot-image">
+            <div class="screenshot-caption">
+                <span class="screenshot-number">7</span>
+                <i>🔌</i> определить кодировку ресурса /index.php.
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
