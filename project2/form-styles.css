@@ -1,0 +1,183 @@
+/* ============================================================
+   form-styles.css — Дополнительные стили для расширенной формы
+   Дополняет основной styles.css (не перезаписывает)
+   ============================================================ */
+
+/* ---- Навигационная кнопка входа ---- */
+.header__login-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background .2s, border-color .2s;
+    margin-left: 12px;
+}
+.header__login-btn:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #fff;
+}
+
+/* ---- Обёртка поля ---- */
+.webform__field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 0;
+}
+.webform__field--full {
+    grid-column: 1 / -1;
+}
+
+/* ---- Метка ---- */
+.webform__label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+}
+.webform__label small {
+    font-weight: 400;
+    color: #9CA3AF;
+    font-size: 12px;
+    margin-left: 4px;
+}
+.webform__req {
+    color: #F14D34;
+}
+
+/* ---- Поля с ошибкой ---- */
+.webform__field--error .webform__input,
+.webform__field--error .webform__textarea,
+.webform__field--error .webform__select {
+    border-color: #EF4444 !important;
+    background-color: #FFF7F7;
+}
+.webform__error-msg {
+    color: #DC2626;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* ---- Блок списка ошибок вверху формы ---- */
+.webform__errors {
+    background: #FFF0EE;
+    border: 1.5px solid #FECACA;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    grid-column: 1 / -1;
+    color: #B91C1C;
+    font-size: 13px;
+}
+.webform__errors ul {
+    margin: 8px 0 0 18px;
+    padding: 0;
+}
+.webform__errors ul li { margin-bottom: 4px; }
+
+/* ---- Переключатели радио ---- */
+.webform__radio-group {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.webform__radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #374151;
+}
+.webform__radio input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #F14D34;
+    cursor: pointer;
+}
+
+/* ---- Множественный select ---- */
+.webform__select {
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 14px;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    min-height: 150px;
+    transition: border-color .2s;
+}
+.webform__select:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.15);
+}
+.webform__select option {
+    background: #394047;
+    color: #fff;
+    padding: 4px 8px;
+}
+.webform__select option:checked {
+    background: #F14D34;
+}
+
+/* ---- Поле даты (перекрашиваем под тему формы) ---- */
+input[type="date"].webform__input {
+    color-scheme: dark;
+}
+
+/* ---- Сообщение о результате (JS-режим) ---- */
+.webform__message {
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    grid-column: 1 / -1;
+    line-height: 1.6;
+}
+.webform__message--success {
+    background: rgba(240,253,244,0.95);
+    border: 1.5px solid #86EFAC;
+    color: #166534;
+}
+.webform__message--error {
+    background: rgba(254,242,242,0.95);
+    border: 1.5px solid #FECACA;
+    color: #B91C1C;
+}
+.webform__message ul {
+    margin: 8px 0 0 18px;
+}
+
+/* ---- Блок «вошли как» ---- */
+.webform__logged-in {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+}
+.webform__logged-in a {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ---- Адаптивность: форма на двух колонках ---- */
+@media (min-width: 768px) {
+    .webform__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        align-items: start;
+    }
+    .webform__field { margin-bottom: 0; }
+}
+@media (max-width: 767px) {
+    .webform__field { margin-bottom: 16px; }
+    .webform__errors, .webform__message { grid-column: unset; }
+}
